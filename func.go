@@ -9,8 +9,8 @@ import (
 )
 
 type ErrorTest struct {
-	err    error
-	status int
+	Err    error
+	Status int
 }
 
 // Test godoc
