@@ -1,6 +1,11 @@
 basePath: /
 definitions:
   errorTest.ErrorTx:
+    properties:
+      msg:
+        type: string
+      status:
+        type: integer
     type: object
   main.ErrorTest:
     type: object

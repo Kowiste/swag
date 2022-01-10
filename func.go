@@ -3,7 +3,7 @@ package main
 import (
 	"net/http"
 
-	"github.com/Kowiste/swag/error"
+	errorTest "github.com/Kowiste/swag/error"
 
 	"github.com/gin-gonic/gin"
 )
@@ -22,7 +22,7 @@ type ErrorTest struct {
 // @Success 200 {object} errorTest.ErrorTx
 // @Router /test1/ [get]
 func Test1(c *gin.Context) {
-	res := new(gin.Error)
+	res := new(errorTest.ErrorTx)
 	c.JSON(http.StatusOK, res)
 }
 
@@ -32,10 +32,10 @@ func Test1(c *gin.Context) {
 // @Tags root
 // @Accept */*
 // @Produce json
-// @Success 200 {object} errorTest.ErrorTx
+// @Success 200 {object} gin.Error
 // @Router /test2/ [get]
 func Test2(c *gin.Context) {
-	res := new(errorTest.ErrorTx)
+	res := new(gin.Error)
 	c.JSON(http.StatusOK, res)
 }
 

@@ -128,7 +128,15 @@ var doc = `{
     },
     "definitions": {
         "errorTest.ErrorTx": {
-            "type": "object"
+            "type": "object",
+            "properties": {
+                "msg": {
+                    "type": "string"
+                },
+                "status": {
+                    "type": "integer"
+                }
+            }
         },
         "main.ErrorTest": {
             "type": "object"
